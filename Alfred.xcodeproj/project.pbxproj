@@ -8,13 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		D47EFDE61E48F681003A9B4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47EFDE51E48F681003A9B4E /* AppDelegate.swift */; };
-		D47EFDE81E48F681003A9B4E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47EFDE71E48F681003A9B4E /* ViewController.swift */; };
 		D47EFDEB1E48F681003A9B4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D47EFDE91E48F681003A9B4E /* Main.storyboard */; };
 		D47EFDEE1E48F681003A9B4E /* Alfred.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D47EFDEC1E48F681003A9B4E /* Alfred.xcdatamodeld */; };
 		D47EFDF01E48F681003A9B4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D47EFDEF1E48F681003A9B4E /* Assets.xcassets */; };
 		D47EFDF31E48F681003A9B4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D47EFDF11E48F681003A9B4E /* LaunchScreen.storyboard */; };
 		D47EFDFE1E48F681003A9B4E /* AlfredTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47EFDFD1E48F681003A9B4E /* AlfredTests.swift */; };
 		D47EFE091E48F681003A9B4E /* AlfredUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47EFE081E48F681003A9B4E /* AlfredUITests.swift */; };
+		D47EFE191E490AE4003A9B4E /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47EFE181E490AE4003A9B4E /* MainTableViewController.swift */; };
+		D4C5D5221E4A13F200640F08 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C5D5211E4A13F200640F08 /* CategoryCell.swift */; };
+		D4C5D5281E4A19FC00640F08 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C5D5271E4A19FC00640F08 /* Category.swift */; };
+		D4C5D52A1E4A314B00640F08 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C5D5291E4A314B00640F08 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +40,6 @@
 /* Begin PBXFileReference section */
 		D47EFDE21E48F681003A9B4E /* Alfred.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alfred.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D47EFDE51E48F681003A9B4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D47EFDE71E48F681003A9B4E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D47EFDEA1E48F681003A9B4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D47EFDED1E48F681003A9B4E /* Alfred.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Alfred.xcdatamodel; sourceTree = "<group>"; };
 		D47EFDEF1E48F681003A9B4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +51,10 @@
 		D47EFE041E48F681003A9B4E /* AlfredUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlfredUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D47EFE081E48F681003A9B4E /* AlfredUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlfredUITests.swift; sourceTree = "<group>"; };
 		D47EFE0A1E48F681003A9B4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D47EFE181E490AE4003A9B4E /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTableViewController.swift; path = ../MainTableViewController.swift; sourceTree = "<group>"; };
+		D4C5D5211E4A13F200640F08 /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		D4C5D5271E4A19FC00640F08 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		D4C5D5291E4A314B00640F08 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,11 +105,13 @@
 		D47EFDE41E48F681003A9B4E /* Alfred */ = {
 			isa = PBXGroup;
 			children = (
+				D4C5D5261E4A15AD00640F08 /* Controller */,
+				D4C5D5251E4A15AA00640F08 /* View */,
+				D4C5D5231E4A159000640F08 /* Model */,
 				D47EFDE51E48F681003A9B4E /* AppDelegate.swift */,
-				D47EFDE71E48F681003A9B4E /* ViewController.swift */,
 				D47EFDE91E48F681003A9B4E /* Main.storyboard */,
-				D47EFDEF1E48F681003A9B4E /* Assets.xcassets */,
 				D47EFDF11E48F681003A9B4E /* LaunchScreen.storyboard */,
+				D47EFDEF1E48F681003A9B4E /* Assets.xcassets */,
 				D47EFDF41E48F681003A9B4E /* Info.plist */,
 				D47EFDEC1E48F681003A9B4E /* Alfred.xcdatamodeld */,
 			);
@@ -126,6 +134,31 @@
 				D47EFE0A1E48F681003A9B4E /* Info.plist */,
 			);
 			path = AlfredUITests;
+			sourceTree = "<group>";
+		};
+		D4C5D5231E4A159000640F08 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D4C5D5271E4A19FC00640F08 /* Category.swift */,
+				D4C5D5291E4A314B00640F08 /* User.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		D4C5D5251E4A15AA00640F08 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D4C5D5211E4A13F200640F08 /* CategoryCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		D4C5D5261E4A15AD00640F08 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D47EFE181E490AE4003A9B4E /* MainTableViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +229,7 @@
 				TargetAttributes = {
 					D47EFDE11E48F681003A9B4E = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = T2EPS5RLC3;
 						ProvisioningStyle = Automatic;
 					};
 					D47EFDF81E48F681003A9B4E = {
@@ -262,9 +296,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4C5D5281E4A19FC00640F08 /* Category.swift in Sources */,
 				D47EFDEE1E48F681003A9B4E /* Alfred.xcdatamodeld in Sources */,
-				D47EFDE81E48F681003A9B4E /* ViewController.swift in Sources */,
+				D4C5D52A1E4A314B00640F08 /* User.swift in Sources */,
+				D47EFE191E490AE4003A9B4E /* MainTableViewController.swift in Sources */,
 				D47EFDE61E48F681003A9B4E /* AppDelegate.swift in Sources */,
+				D4C5D5221E4A13F200640F08 /* CategoryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +453,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = T2EPS5RLC3;
 				INFOPLIST_FILE = Alfred/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rmulton.Alfred;
@@ -428,6 +466,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = T2EPS5RLC3;
 				INFOPLIST_FILE = Alfred/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rmulton.Alfred;
@@ -509,6 +548,7 @@
 				D47EFE0F1E48F681003A9B4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D47EFE101E48F681003A9B4E /* Build configuration list for PBXNativeTarget "AlfredTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +557,7 @@
 				D47EFE121E48F681003A9B4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D47EFE131E48F681003A9B4E /* Build configuration list for PBXNativeTarget "AlfredUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +566,7 @@
 				D47EFE151E48F681003A9B4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

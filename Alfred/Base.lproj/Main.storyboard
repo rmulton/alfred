@@ -1,26 +1,92 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xPI-xq-Xeu">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Main menu-->
+        <scene sceneID="zza-It-85J">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <tableViewController title="Main menu" id="k6C-Rt-ubi" customClass="MainTableViewController" customModule="Alfred" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="302" sectionHeaderHeight="18" sectionFooterHeight="18" id="9lh-iu-Kep">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="categoryCell" rowHeight="302" id="8Zx-1t-l5x" customClass="CategoryCell" customModule="Alfred" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="56" width="375" height="302"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8Zx-1t-l5x" id="GXR-M7-uPg">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="301"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The world today" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIA-Gk-9ne">
+                                            <rect key="frame" x="8" y="223" width="359" height="33"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="28"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="morning_briefing" translatesAutoresizingMaskIntoConstraints="NO" id="SQr-zr-8Ax">
+                                            <rect key="frame" x="8" y="8" width="359" height="207"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="207" id="siU-nZ-Ajc"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I summed it up for you !" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6JP-GT-gGB">
+                                            <rect key="frame" x="8" y="264" width="359" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="HIA-Gk-9ne" firstAttribute="top" secondItem="SQr-zr-8Ax" secondAttribute="bottom" constant="8" id="9oz-aX-l0E"/>
+                                        <constraint firstItem="HIA-Gk-9ne" firstAttribute="trailing" secondItem="GXR-M7-uPg" secondAttribute="trailingMargin" id="DKI-xk-b4R"/>
+                                        <constraint firstItem="6JP-GT-gGB" firstAttribute="top" secondItem="HIA-Gk-9ne" secondAttribute="bottom" constant="8" id="QQR-tv-Pum"/>
+                                        <constraint firstItem="6JP-GT-gGB" firstAttribute="trailing" secondItem="GXR-M7-uPg" secondAttribute="trailingMargin" id="WVM-Xr-UhK"/>
+                                        <constraint firstItem="SQr-zr-8Ax" firstAttribute="leading" secondItem="GXR-M7-uPg" secondAttribute="leadingMargin" id="aW9-cA-vQq"/>
+                                        <constraint firstItem="SQr-zr-8Ax" firstAttribute="trailing" secondItem="GXR-M7-uPg" secondAttribute="trailingMargin" id="ckD-vW-JjD"/>
+                                        <constraint firstItem="6JP-GT-gGB" firstAttribute="leading" secondItem="GXR-M7-uPg" secondAttribute="leadingMargin" id="k71-pm-8iF"/>
+                                        <constraint firstItem="HIA-Gk-9ne" firstAttribute="leading" secondItem="GXR-M7-uPg" secondAttribute="leadingMargin" id="kG0-Rx-PbV"/>
+                                        <constraint firstItem="SQr-zr-8Ax" firstAttribute="top" secondItem="GXR-M7-uPg" secondAttribute="topMargin" id="r6z-rY-Kuj"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="k6C-Rt-ubi" id="Q3e-oL-9xG"/>
+                            <outlet property="delegate" destination="k6C-Rt-ubi" id="MrY-g3-eQX"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Alfred's today" id="i7W-NR-eVy"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tuU-Qz-WWw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="652" y="187.55622188905548"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="w0G-Xa-4D5">
+            <objects>
+                <navigationController id="xPI-xq-Xeu" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rtG-mg-YDc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="k6C-Rt-ubi" kind="relationship" relationship="rootViewController" id="Rc1-PS-wYV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kHW-fw-UaB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-247" y="188"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="morning_briefing" width="500" height="324"/>
+    </resources>
 </document>
