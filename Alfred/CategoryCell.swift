@@ -7,14 +7,17 @@
 //
 
 import UIKit
-/*
+
 class CategoryCell: UITableViewCell {
     
-    //@IBOutlet weak var title: UILabel!
-    //@IBOutlet weak var descript: UILabel!
-    
+    @IBOutlet weak var img: UIImageView!
+    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var details: UILabel!
+
+
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.img.clipsToBounds = false
         // Initialization code
     }
 
@@ -25,10 +28,9 @@ class CategoryCell: UITableViewCell {
     }
     
     func updateUI(category: Category) {
-        descript.text = category.description
+        details.text = category.description
         title.text = category.title
-        //TODO : image from URL
+        img.image = category.image
     }
  
 }
-*/

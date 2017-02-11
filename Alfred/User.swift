@@ -30,14 +30,18 @@ class User {
         self._name = name
         
         if categories != nil{
-            self._categories = categories
+            self._categories = categories!
         }
         else{
             self._categories = [Category]()
         }
     }
     
-    public func addCategory(category: Category){
-        self._categories?.append(category)
+    public func addCategory(category: Category?){
+        
+        if category != nil{
+            self._categories?.append(category!)
+        }
+        
     }
 }

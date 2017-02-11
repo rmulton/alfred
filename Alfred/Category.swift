@@ -7,12 +7,14 @@
 //
 
 import Foundation
+import UIKit
 
 class Category {
     
     private var _title: String!
     private var _description: String!
-    private var _imageURL: String!
+    private var _image: UIImage!
+    private var _detailSections: [[Detail]]
     
     var title: String {
         return _title
@@ -22,15 +24,26 @@ class Category {
         return _description
     }
     
-    var imageURL: String{
-        return _imageURL
+    var image: UIImage{
+        return _image
     }
     
-    init(title: String, description: String, imageURL: String) {
+    var detailSections: [[Detail]]{
+        return _detailSections
+    }
+    
+    init(){
+        _title = ""
+        _description = ""
+        _image = UIImage()
+        _detailSections = [[Detail]]()
+    }
+    
+    init(title: String, description: String, image: UIImage, detailSections: [[Detail]]) {
         
-        _title = title
-        _description = description
-        _imageURL = imageURL
-        
+        self._title = title
+        self._description = description
+        self._image = image
+        self._detailSections = detailSections
     }
 }

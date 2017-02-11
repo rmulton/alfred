@@ -1,4 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="15G31" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Category" representedClassName="Category" syncable="YES" codeGenerationType="class">
+        <attribute name="descript" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="categoryToDetailSections" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DetailSections" inverseName="detailSectionsToCategory" inverseEntity="DetailSections" syncable="YES"/>
+        <relationship name="categoryToUser" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="userToCategory" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="Detail" representedClassName="Detail" syncable="YES" codeGenerationType="class">
+        <attribute name="descript" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="source" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="detailToDetailSections" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DetailSections" inverseName="detailSectionsToDetail" inverseEntity="DetailSections" syncable="YES"/>
+    </entity>
+    <entity name="DetailSections" representedClassName="DetailSections" syncable="YES" codeGenerationType="class">
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="detailSectionsToCategory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="categoryToDetailSections" inverseEntity="Category" syncable="YES"/>
+        <relationship name="detailSectionsToDetail" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Detail" inverseName="detailToDetailSections" inverseEntity="Detail" syncable="YES"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="userToCategory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="categoryToUser" inverseEntity="Category" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Category" positionX="-63" positionY="-18" width="128" height="120"/>
+        <element name="DetailSections" positionX="-54" positionY="18" width="128" height="90"/>
+        <element name="User" positionX="-36" positionY="36" width="128" height="75"/>
+        <element name="Detail" positionX="-18" positionY="45" width="128" height="105"/>
+    </elements>
 </model>

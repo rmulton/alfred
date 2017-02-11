@@ -1,18 +1,20 @@
 //
-//  MainTableViewController.swift
+//  DetailsTableViewController.swift
 //  Alfred
 //
-//  Created by rob on 06/02/2017.
+//  Created by rob on 10/02/2017.
 //  Copyright © 2017 rmulton. All rights reserved.
 //
 
 import UIKit
 
-class MainTableViewController: UITableViewController {
-
+class DetailsTableViewController: UITableViewController {
+    
+    var category = Category()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -29,38 +31,22 @@ class MainTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        
-        if user != nil, user?.categories != nil{
-            return user!.categories!.count
-        }
-        else{
-            print("Problem with the user object : \(user)")
-            return 0
-        }
+        return category.detailSections.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1 //TODO : change
+        return category.detailSections[section].count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "categoryCell", for: indexPath) as! CategoryCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "detailCell", for: indexPath) as! DetailTableViewCell
 
         // Configure the cell...
+        let details = category.detailSections[indexPath.section][indexPath.row]
+        cell.updateUI(details: details)
         
-        if user != nil, user?.categories != nil{
-            let category = user!.categories![indexPath.section]
-            cell.updateUI(category: category)
-            return cell
-        }
-        else{
-            print("Either user or user.categories are set to nil")
-            let emptyCategory = Category()
-            cell.updateUI(category: emptyCategory)
-            return cell
-        }
-
+        return cell
     }
 
     /*
@@ -98,37 +84,14 @@ class MainTableViewController: UITableViewController {
     }
     */
 
-    
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        if segue.identifier == "mainToDetails"{
-            
-            let section = self.tableView.indexPathForSelectedRow?.section
-            
-            if section != nil{
-                let selectedCategory = user?.categories?[section!]
-                let destination = segue.destination as! DetailsTableViewController
-                
-                if selectedCategory != nil {
-                    destination.category = selectedCategory!
-                }
-                else{
-                    print("selectedCategory is nil")
-                }
-                
-            }
-            else{
-                print("Problem with indexPathForSelectedRow")
-            }
-            
-        }
-        
     }
-    
-    
+    */
 
 }
