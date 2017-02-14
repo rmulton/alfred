@@ -7,21 +7,62 @@
 //
 
 import UIKit
+import CoreData
 
-class DetailsTableViewController: UITableViewController {
+class DetailsTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
-    var category = Category()
+    var category: Category?
+    var detailController: NSFetchedResultsController<Detail>!
+    var details: [[Detail]]?
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-
+        loadDetails()
+        print(details)
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
+    
+    // MARK: - Core data binding
+    
+    func loadDetails(){
+        attemptDetailsFetch()
+        
+        if let sections = detailController.sections{
+            
+            details = [[Detail]]()
+            
+            for section in sections{
+                details!.append(section.objects as! [Detail])
+            }
+            
+        }
+        
+    }
+    
+    func attemptDetailsFetch(){
+        let fetchRequest: NSFetchRequest<Detail> = Detail.fetchRequest()
+        let sortDescriptor = NSSortDescriptor(key: "title", ascending: false)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        
+        let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "toDetailSection", cacheName: nil)
+        
+        self.detailController = controller
+        
+        do{
+            try controller.performFetch()
+        } catch {
+            let error = error as NSError
+            print("\(error)")
+        }
+    }
 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -31,20 +72,38 @@ class DetailsTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return category.detailSections.count
+        
+        if let details = details{
+            return details.count
+        }
+        else{
+            return 0
+        }
+        
+        //return category.detailSections.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return category.detailSections[section].count
+        
+        if let details = details{
+            return details[section].count
+        }
+        else{
+            return 0
+        }
+        //return category.detailSections[section].count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "detailCell", for: indexPath) as! DetailTableViewCell
 
         // Configure the cell...
-        let details = category.detailSections[indexPath.section][indexPath.row]
-        cell.updateUI(details: details)
+        
+        if let details = details{
+            let detail = details[indexPath.section][indexPath.row]
+            cell.updateUI(detail: detail)
+        }
         
         return cell
     }
@@ -93,5 +152,6 @@ class DetailsTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    
 }

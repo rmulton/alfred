@@ -10,8 +10,10 @@ import UIKit
 
 class DetailTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var title: UILabel!
     @IBOutlet weak var descript: UILabel!
     @IBOutlet weak var source: UILabel!
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,8 +26,9 @@ class DetailTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func updateUI(details: Detail){
-        descript.text = details.descript
-        source.text = details.source
+    func updateUI(detail: Detail){
+        title.text = detail.title
+        descript.text = detail.descript
+        source.text = detail.source
     }
 }

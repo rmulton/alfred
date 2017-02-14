@@ -6,6 +6,7 @@
 //  Copyright © 2017 rmulton. All rights reserved.
 //
 
+/*
 import Foundation
 
 class Detail{
@@ -39,3 +40,4 @@ class Detail{
     }
     
 }
+*/

@@ -28,9 +28,10 @@ class CategoryCell: UITableViewCell {
     }
     
     func updateUI(category: Category) {
-        details.text = category.description
+        details.text = category.descript
         title.text = category.title
-        img.image = category.image
+        img.image = category.image as! UIImage?
+        
     }
  
 }
