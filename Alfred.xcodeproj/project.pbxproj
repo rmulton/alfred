@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2062D6BA8ED1C261E41340CB /* Pods_Alfred.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B2F45311B60BF8F90EE01E9 /* Pods_Alfred.framework */; };
+		412CFD9C980E1F6B72C14C83 /* Pods_AlfredUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48EB8D205312FA4CBF070079 /* Pods_AlfredUITests.framework */; };
+		9AC0DF2FD0D56A2569FA47CC /* Pods_AlfredTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5A7672413D81911A4EA52EE /* Pods_AlfredTests.framework */; };
 		D409BCF61E53756000443834 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D409BCF51E53756000443834 /* Assets.xcassets */; };
+		D47306A11E54B12D00F6923C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47306A01E54B12D00F6923C /* Constants.swift */; };
 		D47EFDE61E48F681003A9B4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47EFDE51E48F681003A9B4E /* AppDelegate.swift */; };
 		D47EFDEE1E48F681003A9B4E /* Alfred.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D47EFDEC1E48F681003A9B4E /* Alfred.xcdatamodeld */; };
 		D47EFDF31E48F681003A9B4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D47EFDF11E48F681003A9B4E /* LaunchScreen.storyboard */; };
@@ -50,7 +54,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B2F45311B60BF8F90EE01E9 /* Pods_Alfred.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Alfred.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		48EB8D205312FA4CBF070079 /* Pods_AlfredUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlfredUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B61118E3E8C1A628AFC8C71 /* Pods-AlfredUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlfredUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AlfredUITests/Pods-AlfredUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B22AC11428E4B82631C40AFC /* Pods-AlfredUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlfredUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AlfredUITests/Pods-AlfredUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B5A7672413D81911A4EA52EE /* Pods_AlfredTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlfredTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D409BCF51E53756000443834 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Alfred/Assets.xcassets; sourceTree = "<group>"; };
+		D47306A01E54B12D00F6923C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D47EFDE21E48F681003A9B4E /* Alfred.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alfred.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D47EFDE51E48F681003A9B4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D47EFDED1E48F681003A9B4E /* Alfred.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Alfred.xcdatamodel; sourceTree = "<group>"; };
@@ -79,6 +89,10 @@
 		D4C5D5211E4A13F200640F08 /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		D4C5D5271E4A19FC00640F08 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		D4C5D5291E4A314B00640F08 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		DAA79542BF977B409D1131A6 /* Pods-Alfred.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alfred.release.xcconfig"; path = "Pods/Target Support Files/Pods-Alfred/Pods-Alfred.release.xcconfig"; sourceTree = "<group>"; };
+		E09B0844AF41686DDA907580 /* Pods-AlfredTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlfredTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AlfredTests/Pods-AlfredTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E4D4AA07C36F6042A3396516 /* Pods-Alfred.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alfred.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Alfred/Pods-Alfred.debug.xcconfig"; sourceTree = "<group>"; };
+		FFCE28E4655D5B4FC27C2F9C /* Pods-AlfredTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlfredTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AlfredTests/Pods-AlfredTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2062D6BA8ED1C261E41340CB /* Pods_Alfred.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AC0DF2FD0D56A2569FA47CC /* Pods_AlfredTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,12 +116,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				412CFD9C980E1F6B72C14C83 /* Pods_AlfredUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		299E82BF08669B3CC1DF5DCF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1B2F45311B60BF8F90EE01E9 /* Pods_Alfred.framework */,
+				B5A7672413D81911A4EA52EE /* Pods_AlfredTests.framework */,
+				48EB8D205312FA4CBF070079 /* Pods_AlfredUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A1B6E83CAD1AA947F6E91701 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E4D4AA07C36F6042A3396516 /* Pods-Alfred.debug.xcconfig */,
+				DAA79542BF977B409D1131A6 /* Pods-Alfred.release.xcconfig */,
+				E09B0844AF41686DDA907580 /* Pods-AlfredTests.debug.xcconfig */,
+				FFCE28E4655D5B4FC27C2F9C /* Pods-AlfredTests.release.xcconfig */,
+				7B61118E3E8C1A628AFC8C71 /* Pods-AlfredUITests.debug.xcconfig */,
+				B22AC11428E4B82631C40AFC /* Pods-AlfredUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D47EFDD91E48F681003A9B4E = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +154,8 @@
 				D47EFDFC1E48F681003A9B4E /* AlfredTests */,
 				D47EFE071E48F681003A9B4E /* AlfredUITests */,
 				D47EFDE31E48F681003A9B4E /* Products */,
+				A1B6E83CAD1AA947F6E91701 /* Pods */,
+				299E82BF08669B3CC1DF5DCF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,6 +175,7 @@
 				D4C5D5261E4A15AD00640F08 /* Controller */,
 				D4C5D5251E4A15AA00640F08 /* View */,
 				D4C5D5231E4A159000640F08 /* Model */,
+				D47306A01E54B12D00F6923C /* Constants.swift */,
 				D47EFDE51E48F681003A9B4E /* AppDelegate.swift */,
 				D47EFDF11E48F681003A9B4E /* LaunchScreen.storyboard */,
 				D48ACAAE1E5288E6006C6D91 /* Main.storyboard */,
@@ -164,7 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				D4CB81B81E4F542C00B44A60 /* CoreDataVersion */,
-				D4CB81B71E4F541C00B44A60 /* NoCoreDataVersion */,
+				D4CB81B71E4F541C00B44A60 /* Deprecated : NoCoreDataVersion */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -187,7 +230,7 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
-		D4CB81B71E4F541C00B44A60 /* NoCoreDataVersion */ = {
+		D4CB81B71E4F541C00B44A60 /* Deprecated : NoCoreDataVersion */ = {
 			isa = PBXGroup;
 			children = (
 				D483D5A81E4E7E0300ED09C8 /* SampleData.swift */,
@@ -195,15 +238,15 @@
 				D4C5D5291E4A314B00640F08 /* User.swift */,
 				D4B590601E4DF30200FD5D37 /* Detail.swift */,
 			);
-			name = NoCoreDataVersion;
+			name = "Deprecated : NoCoreDataVersion";
 			sourceTree = "<group>";
 		};
 		D4CB81B81E4F542C00B44A60 /* CoreDataVersion */ = {
 			isa = PBXGroup;
 			children = (
-				D48ACA9E1E523926006C6D91 /* DetailSection+CoreDataClass.swift */,
 				D48ACAA01E523926006C6D91 /* User+CoreDataClass.swift */,
 				D48ACAA21E523926006C6D91 /* Category+CoreDataClass.swift */,
+				D48ACA9E1E523926006C6D91 /* DetailSection+CoreDataClass.swift */,
 				D48ACAA41E523926006C6D91 /* Detail+CoreDataClass.swift */,
 				D4CB81B91E4F545200B44A60 /* Properties */,
 			);
@@ -228,9 +271,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D47EFE0D1E48F681003A9B4E /* Build configuration list for PBXNativeTarget "Alfred" */;
 			buildPhases = (
+				D03ABA88CB168F8F61240931 /* [CP] Check Pods Manifest.lock */,
 				D47EFDDE1E48F681003A9B4E /* Sources */,
 				D47EFDDF1E48F681003A9B4E /* Frameworks */,
 				D47EFDE01E48F681003A9B4E /* Resources */,
+				825717AA41FE7B45BC7DFDA9 /* [CP] Embed Pods Frameworks */,
+				25A438358E761F0FBA859BB8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -245,9 +291,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D47EFE101E48F681003A9B4E /* Build configuration list for PBXNativeTarget "AlfredTests" */;
 			buildPhases = (
+				25B019FCECDF91706C1740F5 /* [CP] Check Pods Manifest.lock */,
 				D47EFDF51E48F681003A9B4E /* Sources */,
 				D47EFDF61E48F681003A9B4E /* Frameworks */,
 				D47EFDF71E48F681003A9B4E /* Resources */,
+				E7C04D2ACD0B6C8EF25B8592 /* [CP] Embed Pods Frameworks */,
+				2775E1F4DF2118BD0D4299A3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -263,9 +312,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D47EFE131E48F681003A9B4E /* Build configuration list for PBXNativeTarget "AlfredUITests" */;
 			buildPhases = (
+				CF713FAACAE3E482E4AA20DC /* [CP] Check Pods Manifest.lock */,
 				D47EFE001E48F681003A9B4E /* Sources */,
 				D47EFE011E48F681003A9B4E /* Frameworks */,
 				D47EFE021E48F681003A9B4E /* Resources */,
+				FADE767FC6C1114659C0E80B /* [CP] Embed Pods Frameworks */,
+				6F4572929BF92467B94254B4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -351,6 +403,144 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		25A438358E761F0FBA859BB8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Alfred/Pods-Alfred-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		25B019FCECDF91706C1740F5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2775E1F4DF2118BD0D4299A3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AlfredTests/Pods-AlfredTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F4572929BF92467B94254B4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AlfredUITests/Pods-AlfredUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		825717AA41FE7B45BC7DFDA9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Alfred/Pods-Alfred-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF713FAACAE3E482E4AA20DC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D03ABA88CB168F8F61240931 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E7C04D2ACD0B6C8EF25B8592 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AlfredTests/Pods-AlfredTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FADE767FC6C1114659C0E80B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AlfredUITests/Pods-AlfredUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D47EFDDE1E48F681003A9B4E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -374,6 +564,7 @@
 				D48ACAAA1E523926006C6D91 /* Category+CoreDataClass.swift in Sources */,
 				D4C5D5221E4A13F200640F08 /* CategoryCell.swift in Sources */,
 				D48ACAAB1E523926006C6D91 /* Category+CoreDataProperties.swift in Sources */,
+				D47306A11E54B12D00F6923C /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,6 +706,7 @@
 		};
 		D47EFE0E1E48F681003A9B4E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4D4AA07C36F6042A3396516 /* Pods-Alfred.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = T2EPS5RLC3;
@@ -529,6 +721,7 @@
 		};
 		D47EFE0F1E48F681003A9B4E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAA79542BF977B409D1131A6 /* Pods-Alfred.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = T2EPS5RLC3;
@@ -543,6 +736,7 @@
 		};
 		D47EFE111E48F681003A9B4E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E09B0844AF41686DDA907580 /* Pods-AlfredTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -557,6 +751,7 @@
 		};
 		D47EFE121E48F681003A9B4E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFCE28E4655D5B4FC27C2F9C /* Pods-AlfredTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -571,6 +766,7 @@
 		};
 		D47EFE141E48F681003A9B4E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B61118E3E8C1A628AFC8C71 /* Pods-AlfredUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = AlfredUITests/Info.plist;
@@ -584,6 +780,7 @@
 		};
 		D47EFE151E48F681003A9B4E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B22AC11428E4B82631C40AFC /* Pods-AlfredUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = AlfredUITests/Info.plist;

@@ -21,18 +21,16 @@ class DetailsTableViewController: UITableViewController, NSFetchedResultsControl
         self.title = category?.title
         loadDetails()
         
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        // Adapt presentation to the content size
+        self.tableView.rowHeight = UITableViewAutomaticDimension;
+        self.tableView.estimatedRowHeight = 130.0;
     }
 
     
     // MARK: - Core data binding
     
     func loadDetails(){
-        attemptDetailsFetch()
+        fetchDetailsOfThisCategory()
         
         if let sections = detailController.sections{
             
@@ -46,19 +44,20 @@ class DetailsTableViewController: UITableViewController, NSFetchedResultsControl
         
     }
     
-    func attemptDetailsFetch(){
-        
+    func fetchDetailsOfThisCategory(){
         
         if category != nil{
             
             let fetchRequest: NSFetchRequest<Detail> = Detail.fetchRequest()
+            
             // WARNING : the sort descriptor must use the same key as the one used in sectionNameKeyPath by the controller (see below)
-            let sortDescriptor = NSSortDescriptor(key: "toDetailSection", ascending: false)
+            let sortDescriptor = NSSortDescriptor(key: "toDetailSection.title", ascending: false)
             fetchRequest.sortDescriptors = [sortDescriptor]
             
-            fetchRequest.predicate = NSPredicate(format: "toDetailSection.toCategory = %@", category!)
+            // Filter to get the details from the required category
+            fetchRequest.predicate = NSPredicate(format: "toDetailSection.toCategory.title = %@", category!.title!)
             
-            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "toDetailSection", cacheName: nil)
+            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "toDetailSection.title", cacheName: nil)
             
             self.detailController = controller
             
@@ -89,25 +88,27 @@ class DetailsTableViewController: UITableViewController, NSFetchedResultsControl
         // #warning Incomplete implementation, return the number of sections
         
         if let details = details{
+            //print(details.count)
             return details.count
         }
         else{
+            print("We found no section in this category")
             return 0
         }
         
-        //return category.detailSections.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         
         if let details = details{
+            //print(details[section].count)
             return details[section].count
         }
         else{
+            print("We found no detail in this detailSection")
             return 0
         }
-        //return category.detailSections[section].count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
